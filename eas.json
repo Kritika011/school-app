@@ -1,0 +1,23 @@
+{
+  "cli": {
+    "version": ">= 3.16.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle",
+        "gradleCommand": ":app:bundleRelease",
+        "autoIncrement": true
+      },
+      "env": {
+        "ENVFILE": ".env.production"
+      }
+    }
+  }
+}
